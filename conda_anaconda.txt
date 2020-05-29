@@ -1,0 +1,5 @@
+numpy
+configparser
+requests
+paramiko
+scp
