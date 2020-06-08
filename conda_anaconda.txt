@@ -3,3 +3,4 @@ configparser
 requests
 paramiko
 scp
+xarray

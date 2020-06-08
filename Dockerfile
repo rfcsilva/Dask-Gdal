@@ -9,13 +9,11 @@ ADD  conda_forge.txt /conda_forge.txt
 WORKDIR /
 
 # Basic update
-#RUN ["apt-get", "update"]
-#RUN ["apt-get", "dist-upgrade","-y"]
 RUN ["apk", "update"]
-RUN ["apk", "add", "bash"]
+RUN ["apk", "add", "bash", "nano"]
 
 #SETUP SSH
-RUN ["apk", "add", "-U", "openssh", "nano"]
+RUN ["apk", "add", "-U", "openssh"]
 RUN ["rm", "-rf", "/tmp/*", "/var/cache/apk/*"]
 RUN mkdir /var/run/sshd
 RUN echo 'root:password' | chpasswd

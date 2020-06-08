@@ -30,18 +30,3 @@ services:
       - "7725:22" 
     hostname: dask-worker4
     command: ["dask-worker", "tcp://scheduler:8786"] 
-  notebook:
-    image: daskdev/dask-notebook
-    hostname: notebook
-    ports:
-      - "8888:8888"
-    environment:
-      - DASK_SCHEDULER_ADDRESS="tcp://scheduler:8786"
-      - EXTRA_APT_PACKAGES=gdal-bin libgdal-dev
-      - EXTRA_CONDA_PACKAGES=rasterio
-  prefect:
-    image: dask_gdal
-    hostname: prefect
-    tty: true
-    ports:
-      - 8080:8080
