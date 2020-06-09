@@ -3,3 +3,4 @@ dask
 distributed
 gdal
 fiona
+numexpr
