@@ -4,3 +4,5 @@ distributed
 gdal
 fiona
 numexpr
+rioxarray
+matplotlib
