@@ -10,7 +10,8 @@ WORKDIR /
 
 # Basic update
 RUN ["apk", "update"]
-RUN ["apk", "add", "bash", "nano"]
+RUN ["apk", "add", "git"]
+RUN ["apk", "add", "bash", "nano", "sshpass"]
 
 #SETUP SSH
 RUN ["apk", "add", "-U", "openssh"]
@@ -28,7 +29,6 @@ RUN rm -rf /etc/ssh/ssh_host_rsa_key /etc/ssh/ssh_host_dsa_key
 ENV NOTVISIBLE "in users profile"
 RUN echo "export VISIBLE=now" >> /etc/profile
 EXPOSE 22
-CMD ["/usr/sbin/sshd", "-D"]
 # END OF SSH SETUP
 
 # Instaling Conda packs
