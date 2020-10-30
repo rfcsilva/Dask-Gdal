@@ -5,3 +5,5 @@ gdal
 fiona
 numexpr
 rioxarray
+geojson
+xgboost
