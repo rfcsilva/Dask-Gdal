@@ -5,6 +5,7 @@ FROM frolvlad/alpine-miniconda3
 ADD  scripts /scripts
 ADD  conda_anaconda.txt /conda_anaconda.txt
 ADD  conda_forge.txt /conda_forge.txt
+#ADD  scripts/ssh_copy_config /root/.ssh/config
 
 WORKDIR /
 
