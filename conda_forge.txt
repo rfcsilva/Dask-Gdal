@@ -7,3 +7,6 @@ numexpr
 rioxarray
 geojson
 xgboost
+dask-ml
+dask-xgboost
+s3fs
